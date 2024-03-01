@@ -25,6 +25,7 @@ const io = new Server(server, {
     methods: ["GET", "POST", "PATCH", "DELETE", "PUT"],
   },
 });
+
 io.on(EventsSocket.CONNECTION, (socket) => {
   socket.on(EventsSocket.SEND_DATA, (data: any) => {
     console.log(data);
